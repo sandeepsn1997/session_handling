@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginserviceService } from './loginservice.service';
+import { UserIdleService } from 'angular-user-idle';
 
 @Component({
   selector: 'app-root',
