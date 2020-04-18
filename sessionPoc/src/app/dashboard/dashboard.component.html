@@ -1,1 +1,19 @@
-<p>dashboard works!</p>
+<div class="row">
+  <div class="search-hero">
+    <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="search by name or symbol">
+  </div>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Symbol</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let cmp of companyData | filter:searchText">
+      <td>{{cmp.name}}</td>
+      <td>{{cmp.symbol}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
